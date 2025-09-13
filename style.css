@@ -1,0 +1,239 @@
+:root {
+  --bg1: #1a1a1a;
+  --bg2: #0d0d0d;
+  --accent: #ffeb3b;
+  --text: #ffffff;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, var(--bg1), var(--bg2));
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  animation: bg-glow 8s infinite alternate ease-in-out;
+}
+
+/* Subtle glow animation on background */
+@keyframes bg-glow {
+  from { background: linear-gradient(180deg, #1a1a1a, #0d0d0d); }
+  to { background: linear-gradient(180deg, #202020, #101010); }
+}
+
+/* Poster Box */
+.poster {
+  max-width: 1200px;
+ min-height: 700px;
+  background: rgba(17,17,17,0.95);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 22px;
+  color: #111;
+  box-shadow: 0 5px 15px rgba(255,235,59,0.4);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation for logo */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #fff, var(--accent));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 4s linear infinite;
+}
+
+/* Gradient shine animation */
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.session-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #111;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.session-badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px var(--accent);
+}
+
+/* Main Layout */
+.main {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+}
+
+.left {
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 500px;
+  margin-top: 18px;
+}
+.left:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+.about {
+  font-size: 19px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: #2a2a2a;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 8px;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  margin-top: 30px;
+}
+.chip:hover {
+  background: var(--accent);
+  color: #111;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+/* Right Side */
+.right {
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ip-card {
+  background: #2a2a2a;
+  padding: 12px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ip-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(255,235,59,0.4);
+}
+
+.ip-type {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.ip-value {
+  font-size: 14px;
+  font-family: monospace;
+  margin-top: 4px;
+}
+
+.port {
+  font-size: 10px;
+  color: #bbb;
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+  .title {
+    font-size: 30px;
+  }
+}
+
+.tt{
+
+  font-size: 15px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  background-color: #d5ed87;
+  color: #0d0d0d;
+  font-weight: 600;
+
+
+}
+.smp-features {
+  margin: 12px 0 20px 18px;
+  padding: 0;
+  font-size: 14px;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.6;
+}
+
+.smp-features li {
+  margin-bottom: 6px;
+}
+
